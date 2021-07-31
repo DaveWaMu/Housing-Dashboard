@@ -1,5 +1,8 @@
-# Ignored files
+# Files containing passwords
 env.sh
+
+# Emacs files
+*~
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
