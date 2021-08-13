@@ -23,7 +23,7 @@ DATA_TABLES = [
         'INDEX_COLUMN': 'date',
      },
     {
-        'SOURCE_FILE': 'etl/home_units.csv',
+        'SOURCE_FILE': 'etl/construction_permit.csv',
         'TABLE_NAME': 'home_units',
         'INDEX_COLUMN': 'date',
      },
@@ -40,11 +40,6 @@ DATA_TABLES = [
     {
         'SOURCE_FILE': 'etl/monthly_house_supply.csv',
         'TABLE_NAME': 'monthly_house_supply',
-        'INDEX_COLUMN': 'date',
-     },
-    {
-        'SOURCE_FILE': 'etl/house_permits.csv',
-        'TABLE_NAME': 'house_permits',
         'INDEX_COLUMN': 'date',
      }  
 ]
