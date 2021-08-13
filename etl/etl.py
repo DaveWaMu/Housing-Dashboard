@@ -48,7 +48,6 @@ DATA_TABLES = [
 # why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres)
 TARGET_DATABASE_URL = (
     os.environ.get('DATABASE_URL')
-    .replace('postgres://', 'postgresql://', 1)
     )
 
 def read_source_csv(source_file, index_column):
