@@ -10,3 +10,4 @@ gunicorn>=20.1.0
 pandas>=1.3.0
 psycopg2-binary>=2.9.1
 
+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

@@ -225,6 +225,6 @@ function PermitsSpline() {
 
       chart.render();
   });
-};
+});
 
 PermitsSpline();
