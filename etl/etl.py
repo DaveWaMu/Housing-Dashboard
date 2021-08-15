@@ -7,16 +7,16 @@ from sqlalchemy import create_engine
 
 # Some of this might be best in a constants.py file and read here and in app.py
 DATA_TABLES = [
-    {
-        'SOURCE_FILE': 'etl/lumber_steel_percent_change.csv',
-        'TABLE_NAME': 'lumber_steel',
-        'INDEX_COLUMN': 'date',
-     },
-    {
-        'SOURCE_FILE': 'etl/average_home_price.csv',
-        'TABLE_NAME': 'average_home_price',
-        'INDEX_COLUMN': 'date',
-     },
+    # {
+    #     'SOURCE_FILE': 'etl/lumber_steel_percent_change.csv',
+    #     'TABLE_NAME': 'lumber_steel',
+    #     'INDEX_COLUMN': 'date',
+    #  },
+    # {
+    #     'SOURCE_FILE': 'etl/average_home_price.csv',
+    #     'TABLE_NAME': 'average_home_price',
+    #     'INDEX_COLUMN': 'date',
+    #  },
      {
         'SOURCE_FILE': 'etl/homeownership_rate.csv',
         'TABLE_NAME': 'homeownership_rate',
@@ -26,28 +26,18 @@ DATA_TABLES = [
         'SOURCE_FILE': 'etl/construction_permit.csv',
         'TABLE_NAME': 'home_units',
         'INDEX_COLUMN': 'date',
-     },
-     {
-        'SOURCE_FILE': 'etl/new_2020.csv',
-        'TABLE_NAME': 'new_2020',
-        'INDEX_COLUMN': 'date',
-     }, 
-      {
-        'SOURCE_FILE': 'etl/new_2021.csv',
-        'TABLE_NAME': 'new_2021',
-        'INDEX_COLUMN': 'date',
-     }, 
+     },  
     {
         'SOURCE_FILE': 'etl/monthly_house_supply.csv',
         'TABLE_NAME': 'monthly_house_supply',
         'INDEX_COLUMN': 'date',
-     }  
+     }
 ]
 
 # (https://help.heroku.com/ZKNTJQSK/
 # why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres)
 TARGET_DATABASE_URL = (
-    os.environ.get('DATABASE_URL')
+    os.environ.get('DATABASE_URL').replace('postgres://', 'postgresql://', 1)
     )
 
 def read_source_csv(source_file, index_column):
