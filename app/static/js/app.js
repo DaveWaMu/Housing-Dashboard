@@ -230,3 +230,71 @@ function PermitsSpline() {
 };
 
 PermitsSpline();
+
+// Line Column Mixed Chart
+
+function buildmixedPlot() {
+
+    const url = "/api/home_units";
+    d3.json(url).then(function (d) {
+        console.log("Home Units API", d);
+        var date = d[0].Date;
+        console.log("Date", date);
+        var new_permits_thousands = d[0].new_permits_thousands;
+        console.log("new_permits_thousands", new_permits_thousands);
+        var units_not_started_thousands = d[0].units_not_started_thousands;
+        console.log("units_not_started_thousands", units_not_started_thousands);
+        var units_started_thousands = d[0].units_started_thousands;
+        console.log("units_started_thousands", units_started_thousands);
+        var units_under_construction_thousands = d[0].units_under_construction_thousands;
+        console.log("units_under_construction_thousands", units_under_construction_thousands);
+        var units_constructed_thousands = d[0].units_constructed_thousands;
+        console.log("units_constructed_thousands", units_constructed_thousands);
+
+        var options = {
+            series: [{
+            name: 'Average Home Price',
+            type: 'column',
+            data: new_permits_thousands
+        }, {
+            name: 'Interest Rate',
+            type: 'line',
+            data: units_constructed_thousands
+        }],
+            chart: {
+            height: 350,
+            type: 'line',
+        },
+        stroke: {
+            width: [0, 4]
+        },
+        title: {
+            text: 'History of Home price & Interest Rates'
+        },
+        dataLabels: {
+            enabled: true,
+            enabledOnSeries: [1]
+        },
+        labels: date,
+        xaxis: {
+          type: 'datetime'
+        },
+        yaxis: [{
+            title: {
+              text: 'Average Home Price',
+            },
+          
+          }, {
+            opposite: true,
+            title: {
+              text: 'Interest_Rate'
+            }
+          }]
+          };
+
+        var chart = new ApexCharts(document.querySelector("#linecolumn"), options);
+        chart.render();
+    });
+};
+
+buildmixedPlot();
