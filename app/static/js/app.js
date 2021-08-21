@@ -255,11 +255,11 @@ function buildmixedPlot() {
             series: [{
             name: 'Average Home Price',
             type: 'column',
-            data: new_permits_thousands
+            data: price
         }, {
             name: 'Interest Rate',
             type: 'line',
-            data: units_constructed_thousands
+            data: rate
         }],
             chart: {
             height: 350,
@@ -280,12 +280,14 @@ function buildmixedPlot() {
           type: 'datetime'
         },
         yaxis: [{
+            labels: price,
             title: {
               text: 'Average Home Price',
             },
           
           }, {
             opposite: true,
+            labels: rate,
             title: {
               text: 'Interest_Rate'
             }
