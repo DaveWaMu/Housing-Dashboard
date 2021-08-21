@@ -277,17 +277,14 @@ function buildmixedPlot() {
         },
         labels: date,
         xaxis: {
-          type: 'string'
+          type: 'datetime'
         },
         yaxis: [{
-            labels: new_permits_thousands,
             title: {
               text: 'Average Home Price',
-            },
-          
+            },          
           }, {
             opposite: true,
-            labels: units_constructed_thousands,
             title: {
               text: 'Interest_Rate'
             }
