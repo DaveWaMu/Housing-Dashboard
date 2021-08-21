@@ -277,7 +277,7 @@ function buildmixedPlot() {
         },
         labels: date,
         xaxis: {
-          type: 'datetime'
+          type: 'string'
         },
         yaxis: [{
             labels: new_permits_thousands,
