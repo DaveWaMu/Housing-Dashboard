@@ -191,7 +191,7 @@ PermitsSpline();
 // Line Column Mixed Chart
 function buildmixedPlot() {
 
-    const url = "/api/home_units";
+    const url = "/api/housing_data";
     d3.json(url).then(function (myData) {
 
         var date = myData[0].Date;
@@ -200,44 +200,44 @@ function buildmixedPlot() {
 
         var options = {
             series: [{
-            name: 'Average Home Price',
-            type: 'column',
-            data: price
-        }, {
-            name: 'Interest Rate',
-            type: 'line',
-            data: rate
-        }],
+                name: 'Average Home Price',
+                type: 'column',
+                data: price
+            }, {
+                name: 'Interest Rate',
+                type: 'line',
+                data: rate
+            }],
             chart: {
-            height: 350,
-            type: 'line',
-        },
-        stroke: {
-            width: [0, 4]
-        },
-        title: {
-            text: 'History of Home price & Interest Rates'
-        },
-        dataLabels: {
-            enabled: true,
-            enabledOnSeries: [1]
-        },
-        labels: date,
-        xaxis: {
-          type: 'datetime'
-        },
-        yaxis: [{
-            title: {
-              text: 'Average Home Price',
+                height: 350,
+                type: 'line',
             },
-          
-          }, {
-            opposite: true,
+            stroke: {
+                width: [0, 4]
+            },
             title: {
-              text: 'Interest_Rate'
-            }
-          }]
-          };
+                text: 'History of Home price & Interest Rates'
+            },
+            dataLabels: {
+                enabled: true,
+                enabledOnSeries: [1]
+            },
+            labels: date,
+            xaxis: {
+                type: 'datetime'
+            },
+            yaxis: [{
+                title: {
+                    text: 'Average Home Price',
+                },
+
+            }, {
+                opposite: true,
+                title: {
+                    text: 'Interest_Rate'
+                }
+            }]
+        };
 
         var chart = new ApexCharts(document.querySelector("#linecolumn"), options);
         chart.render();
