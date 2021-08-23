@@ -66,17 +66,19 @@
     <div class="container-fluid">
         <!-- Images for predicted ML-->
         <div class="row">
-            <div class="col-md-6">
-                <img src="../../machine_learning_output/residuals_plot_ml_multivariate_linear_regression.png"></img>
+            <div class="col-6">
+                <img src="../../machine_learning_output/residuals_plot_ml_multivariate_linear_regression.png" alt="residuals_plot_ml_multivariate_linear_regression" id="ml-residualplot"/>
             </div>
-            <div class="col-md-6">
-                <img src="../../machine_learning_output/line_plot_ml_multivariate_linear_regression.png"></img>
+            <div class="col-6">
+                <img src="../../machine_learning_output/line_plot_ml_multivariate_linear_regression.png" alt="line_plot_ml_multivariate_linear_regression" id="ml-lineplot"/>
             </div>
         </div>
     </div>
-        <!-- Predicted ML Table-->
+    <!-- Predicted ML Table-->
     <div class="container-fluid">
-        <table class="table table-hover">
+        <div class="table-responsive">
+            <table id='predictedTable' class="table table-hover"></table>
+        </div>
     </div>
         
         <!--D3-->
