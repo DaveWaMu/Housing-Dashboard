@@ -67,6 +67,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
+                <h3>Multivariate Linear Regresssion on Time-Series Data with Machine Learning</h3>
+                <p>
+                    Prediction of average house price from 1990 to 2021.<br>
+                    R2 Score: 0.9915267525981379<br>
+                    Training Score: 0.9922490753155899<br>
+                    Testing Score: 0.9830009095706425<br>
+
+                    <br>Predictions:<br>
+                    Actual Output: [347500.]<br>
+                    Predicted Output: [350503.97356237]<br>
+                    Prediction Error: [3003.97356237]<br>
+                    Max Prediction Error: [13057.19520935]<br>
+                    Min Prediction Error: [-31281.07004205]
+                </p>
+            </div>
+            <div class="col-md-6">
                 <img src="../../machine_learning_output/residuals_plot_ml_multivariate_linear_regression.png" alt="residuals_plot_ml_multivariate_linear_regression" id="ml-residualplot" class="img-fluid"/>
             </div>
         </div>
@@ -80,8 +96,30 @@
     <div class="container-fluid">
         <div class="table-responsive">
             <table border="1" class="dataframe table table-hover" id="predictedTable">
-                
-            </table>
+                <thead>
+                    <tr style="text-align: right;">
+                        <th>Index</th>
+                        <th>date</th>
+                        <th>interest_rate</th>
+                        <th>units_authorized_started</th>
+                        <th>avg_home_price</th>
+                        <th>homeownership_rate</th>
+                        <th>lumber_price_index</th>
+                        <th>house_supply</th>
+                        <th>new_housing_permits</th>
+                        <th>steel_price_index</th>
+                        <th>under_construction</th>
+                        <th>units_completed</th>
+                        <th>y_actual_output</th>
+                        <th>predicted</th>
+                        <th>error</th>
+                      </tr>
+                    </thead>
+                </thead>
+                <tbody>
+                    Table data belongs here.
+                </tbody>
+            </table>    
         </div>
     </div>
         
@@ -93,9 +131,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
     <!--javaScript-->
     <script src="../static/js/app.js"></script>
-
-    <script src="mltable.html"></script>
-
     <!--Bootstrap Bundle Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
