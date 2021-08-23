@@ -245,3 +245,40 @@ function buildmixedPlot() {
 };
 
 buildmixedPlot();
+
+// Bar Chart: Homeownership Rate
+
+function HomeownershipBar() {
+
+    const url = "/api/housing_data";
+    d3.json(url).then(function (myData) {
+
+        var date = myData[0].Date;
+        var homeownership_rate = d[0].Homeownership_Rate;
+
+        var options = {
+            chart: {
+                type: 'column'
+            },
+            series: [{
+                name: 'Homeownership Rate',
+                data: homeownership_rate
+            }],
+            labels: date,
+            xaxis: {
+                categories: date
+            },
+            yaxis: {
+                title: {
+                    text: 'Average Home Price',
+                }
+            }
+        }
+
+        var chart = new ApexCharts(document.querySelector("#HomeownershipBar"), options);
+
+        chart.render();
+    });
+}
+
+HomeownershipBar();
