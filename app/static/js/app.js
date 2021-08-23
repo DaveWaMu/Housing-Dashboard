@@ -188,13 +188,12 @@ function PermitsSpline() {
 
 PermitsSpline();
 
-// Interest Rate
-
+// Line Column Mixed Chart
 function buildmixedPlot() {
-    
-    const url = "/api/housing_data";
-    d3.json(url).then(function (d) {
-      
+
+    const url = "/api/home_units";
+    d3.json(url).then(function (myData) {
+
         var date = myData[0].Date;
         var rate = myData[0].Interest_Rate;
         var price = myData[0].Average_Home_Price;
@@ -223,25 +222,26 @@ function buildmixedPlot() {
             enabled: true,
             enabledOnSeries: [1]
         },
+        labels: date,
         xaxis: {
-            type: 'datetime',
-            data: date
+          type: 'datetime'
         },
         yaxis: [{
             title: {
-            text: 'Avg Home Price',
+              text: 'Average Home Price',
             },
-        
-        }, {
+          
+          }, {
             opposite: true,
             title: {
-            text: 'Interest Rate'
+              text: 'Interest_Rate'
             }
-        }]
-        };
+          }]
+          };
 
-        var chart = new ApexCharts(document.querySelector("#line"), options);
+        var chart = new ApexCharts(document.querySelector("#linecolumn"), options);
         chart.render();
     });
 };
+
 buildmixedPlot();
