@@ -254,11 +254,11 @@ function HomeownershipBar() {
     d3.json(url).then(function (myData) {
 
         var date = myData[0].Date;
-        var homeownership_rate = d[0].Homeownership_Rate;
+        var homeownership_rate = myData[0].Homeownership_Rate;
 
         var options = {
             chart: {
-                type: 'column'
+                type: 'bar'
             },
             series: [{
                 name: 'Homeownership Rate',
