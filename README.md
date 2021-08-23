@@ -1,5 +1,5 @@
 # Housing-Dashboard
-### Group Project 2- Housing Dashboard; Michigan State University Data Analytics Bootcamp; July 29, 2021.
+### Final Group Project - Housing Dashboard; Michigan State University Data Analytics Bootcamp; July 29, 2021.
 
 This project analyzes coorelations in the Unite States housing market. The factors we look at include:
 
