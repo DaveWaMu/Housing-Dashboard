@@ -258,15 +258,25 @@ function HomeownershipBar() {
 
         var options = {
             chart: {
+                height: 400,
                 type: 'bar'
             },
             series: [{
                 name: 'Homeownership Rate',
                 data: homeownership_rate
             }],
+            title: {
+                text: 'Homeownership Rate'
+            },
+            dataLabels: {
+                enabled: false
+            },
             labels: date,
             xaxis: {
-                categories: date
+                categories: date,
+                title: {
+                    text: 'Date',
+                }
             },
             yaxis: {
                 title: {
