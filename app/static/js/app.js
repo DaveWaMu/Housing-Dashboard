@@ -82,14 +82,13 @@ function RadialChart() {
       console.log("Homeownership Rate API", d);
       var homeownership_rate = d[0].Homeownership_Rate;
       console.log("Homeownership Rate Array", homeownership_rate);
-      var last_row = len(homeownership_rate) -1
 
       var options = {
           chart: {
               height: 250,
               type: "radialBar"
           },
-          series: [homeownership_rate[last_row]],
+          series: [homeownership_rate[125]],
           plotOptions: {
               radialBar: {
                   hollow: {
