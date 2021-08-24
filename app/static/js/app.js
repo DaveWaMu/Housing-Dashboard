@@ -209,7 +209,7 @@ function buildmixedPlot() {
                 data: rate
             }],
             chart: {
-                height: 350,
+                height: 400,
                 type: 'line',
             },
             stroke: {
@@ -258,7 +258,7 @@ function HomeownershipBar() {
 
         var options = {
             chart: {
-                height: 400,
+                height: 300,
                 type: 'bar'
             },
             series: [{
