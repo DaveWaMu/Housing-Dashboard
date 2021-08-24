@@ -279,6 +279,8 @@ function HomeownershipBar() {
                 }
             },
             yaxis: {
+                min: 0,
+                max: 100,
                 title: {
                     text: 'Average Home Price',
                 }
