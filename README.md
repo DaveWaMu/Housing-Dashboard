@@ -2,7 +2,7 @@
 
 [Google Slides Presentation](https://docs.google.com/presentation/d/1fSouNBGQuO7H9BnBm26onc5FPJxOpk8zrmwbCRNmBLQ/edit?usp=sharing)
 
-Dashboard visualizes and analyzes factors affecting the US housing market, includeing:
+Dashboard visualization and analysis of factors affecting the US housing market, including:
 
 - Average home price
 - Interest rates
@@ -93,8 +93,7 @@ See the following images:
   - Testing Score: 0.9787881279050938
 
 - Features:
-  - Weight coefficients: [-1.75035299e+04, -7.05863389e+01, -3.05670596e+03, -1.02152948e+01,
-    -6.36429120e+03,  6.30851833e-01,  2.92284833e+02,  2.10778383e+02, -3.14356886e+01]
+  - Weight coefficients: [-1.75035299e+04, -7.05863389e+01, -3.05670596e+03, -1.02152948e+01, -6.36429120e+03, 6.30851833e-01, 2.92284833e+02, 2.10778383e+02, -3.14356886e+01]
   - Y-Axis Intercept: [451413.83352829]
   - Min X Value: [2.76, 526, 63.1, 51.38, 4, 539, 107.83, 416, 559]
   - Max X Value: [10.32, 2120, 69.4, 147.59, 11, 2228, 287.17, 1423, 2110]
